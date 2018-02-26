@@ -8,10 +8,22 @@ c:\users\roman wong\documents\github\tictactoe\app.h(96): warning C4244: 'argume
 c:\users\roman wong\documents\github\tictactoe\app.h(97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\roman wong\documents\github\tictactoe\app.h(98): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\roman wong\documents\github\tictactoe\app.h(99): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\roman wong\documents\github\tictactoe\app.cpp(12): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\roman wong\documents\github\tictactoe\app.cpp(33): warning C4018: '<': signed/unsigned mismatch
-c:\users\roman wong\documents\github\tictactoe\app.cpp(65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\roman wong\documents\github\tictactoe\app.cpp(104): warning C4018: '<': signed/unsigned mismatch
-c:\users\roman wong\documents\github\tictactoe\app.cpp(112): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\github\tictactoe\app.cpp(11): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\roman wong\documents\github\tictactoe\app.cpp(18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\github\tictactoe\app.cpp(38): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\github\tictactoe\app.cpp(100): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\github\tictactoe\app.cpp(108): warning C4018: '<': signed/unsigned mismatch
+  app_main.cpp
+c:\users\roman wong\documents\github\tictactoe\app.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\roman wong\documents\github\tictactoe\app.h(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\github\tictactoe\app.h(70): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\github\tictactoe\app.h(71): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\github\tictactoe\app.h(87): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\github\tictactoe\app.h(96): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\github\tictactoe\app.h(97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\github\tictactoe\app.h(98): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\github\tictactoe\app.h(99): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+App.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   glutapp.vcxproj -> C:\Users\Roman Wong\Documents\GitHub\ticTactoe\visualc15\obj\glutapp_Debug\glutapp.exe
   glutapp.vcxproj -> obj\glutapp_Debug\glutapp.pdb (Full PDB)

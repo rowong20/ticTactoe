@@ -1,5 +1,5 @@
-#ifndef App_h
-#define App_h
+#ifndef App_hpp
+#define App_hpp
 #define PI 3.14159265
 #include "GlutApp.h"
 #include "Vec.h"
@@ -35,29 +35,29 @@ struct Rect {
 struct stateArea {
 	float x;
 	float y;
-	bool occupied;
+	bool unoccupied;
 	stateArea()
 	{
-		occupied = false;
+		unoccupied = true;
 		x = 0;
 		y = 0;
 	}
 	stateArea(float inx, float iny)
 	{
-		occupied = false;
+		unoccupied = true;
 		x = inx;
 		y = iny;
 	}
 	void drawO()
 	{
-		occupied = true;
+		unoccupied = true;
 		vector<Vec*> points;
 		Vec center(x, y);
 		generateCircleData(points, center, .2, 30);
 		glBegin(GL_LINES);
 		for (int i = 0; i < points.size(); i++)
 		{
-			glVertex2f(points[i]->getX(),points[i]->getY());
+			glVertex2f(points[i]->getX(), points[i]->getY());
 		}
 		glEnd();
 	}
@@ -79,7 +79,7 @@ struct stateArea {
 	}
 	void drawX()
 	{
-		occupied = true;
+		unoccupied = true;
 		vector<Vec*> points;
 		Vec center(x, y);
 		generateXData(points, center);
@@ -93,10 +93,14 @@ struct stateArea {
 	void generateXData(vector<Vec*> &points, Vec center) {
 		// Clear the points vector to make sure it's empty before you start
 		points.clear();
-		points.push_back(new Vec(0.2 + center.getX(), 0.2 + center.getY()));
-		points.push_back(new Vec(-0.2 + center.getX(), -0.2 + center.getY()));
-		points.push_back(new Vec(0.2 + center.getX(), -0.2 + center.getY()));
-		points.push_back(new Vec(-0.2 + center.getX(), 0.2 + center.getY()));
+		points.push_back(new Vec(0.3 + center.getX(), 0.3 + center.getY()));
+		points.push_back(new Vec(-0.3 + center.getX(), -0.3 + center.getY()));
+		points.push_back(new Vec(0.3 + center.getX(), -0.3 + center.getY()));
+		points.push_back(new Vec(-0.3 + center.getX(), 0.3 + center.getY()));
+	}
+	bool isEmpty()
+	{
+		return unoccupied;
 	}
 	bool contains(Vec coords)
 	{
@@ -107,30 +111,26 @@ struct stateArea {
 		else
 			return true;
 	}
-	bool isEmpty()
-	{
-		return occupied;
-
-	}
 };
 
-class App: public GlutApp {
-    // Maintain app state here
-    float mx;
-    float my;
-	bool choose=false;
+class App : public GlutApp {
+	// Maintain app state here
+	float mx;
+	float my;
+	bool choose = false;
+	bool player = true;
 	int within[9] = { 0,0,0,0,0,0,0,0,0 };
 	vector<Rect> list;
 	vector<stateArea*> entries;
 public:
-    // Constructor, to initialize state
-    App(const char* label, int x, int y, int w, int h);
-    
-    // These are the events we want to handle
-    void draw();
-    void keyPress(unsigned char key);
-    void mouseDown(float x, float y);
-    void mouseDrag(float x, float y);
+	// Constructor, to initialize state
+	App(const char* label, int x, int y, int w, int h);
+
+	// These are the events we want to handle
+	void draw();
+	void keyPress(unsigned char key);
+	void mouseDown(float x, float y);
+	void mouseDrag(float x, float y);
 };
 
 #endif

@@ -1,0 +1,27 @@
+﻿  App.cpp
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(70): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(71): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(87): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(96): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(98): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(99): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(12): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(33): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(100): warning C4018: '<': signed/unsigned mismatch
+  app_main.cpp
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(70): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(71): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(87): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(96): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(98): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(99): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  glutapp.vcxproj -> C:\Users\Roman Wong\Documents\CSE 170\GlutAppTemplate\visualc15\obj\glutapp_Debug\glutapp.exe
+  glutapp.vcxproj -> obj\glutapp_Debug\glutapp.pdb (Full PDB)

@@ -1,5 +1,5 @@
-#ifndef App_hpp
-#define App_hpp
+#ifndef App_h
+#define App_h
 #define PI 3.14159265
 #include "GlutApp.h"
 #include "Vec.h"
@@ -98,6 +98,15 @@ struct stateArea {
 		points.push_back(new Vec(0.2 + center.getX(), -0.2 + center.getY()));
 		points.push_back(new Vec(-0.2 + center.getX(), 0.2 + center.getY()));
 	}
+	bool contains(Vec coords)
+	{
+		if (coords.x<(x - 0.33) || coords.x>(x + .33))
+			return false;
+		else if (coords.y > (y + 0.33) || coords.y < (y - 0.33))
+			return false;
+		else
+			return true;
+	}
 	bool isEmpty()
 	{
 		return occupied;
@@ -110,7 +119,7 @@ class App: public GlutApp {
     float mx;
     float my;
 	bool choose=false;
-	int within[3] = { 0,0,0 };
+	int within[9] = { 0,0,0,0,0,0,0,0,0 };
 	vector<Rect> list;
 	vector<stateArea*> entries;
 public:

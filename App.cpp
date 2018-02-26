@@ -68,7 +68,11 @@ void App::draw() {
 		//test
 		for (int i = 0; i < 9; i++)
 		{
-			entries[i]->drawX();
+			if (within[i] == 1)
+			{
+				//entries.at(i)->drawO();
+				cout << "Fuck you\n";
+			}
 		}
 	}
     // Draw a yellow cross
@@ -92,19 +96,28 @@ void App::draw() {
 }
 
 void App::mouseDown(float x, float y){
-    // Update app state
-    mx = x;
-    my = y;
+	mx = x;
+	my = y;
 	Vec mouseLoc(mx, my);
 	//if mouse is clicked within a button, keep track in within array.
-	for (int i = 0; i < list.size(); i++)
-	{
-		if (list.at(i).contains(mouseLoc)) {
-			choose = true;
+	if (choose == false) {
+		for (int i = 0; i < list.size(); i++)
+		{
+			if (list.at(i).contains(mouseLoc)) {
+				choose = true;
+			}
 		}
 	}
-    // Redraw the scene
-    redraw();
+	else {
+		for (int i = 0; i < entries.size(); i++)
+		{
+			if (entries.at(i)->contains(mouseLoc)) {
+				within[i] = 1;
+			}
+		}
+	}
+	// Redraw the scene
+	redraw();
 }
 
 void App::mouseDrag(float x, float y){

@@ -36,6 +36,7 @@ struct stateArea {
 	float x;
 	float y;
 	bool unoccupied;
+	int shape = 0;
 	stateArea()
 	{
 		unoccupied = true;
@@ -48,16 +49,23 @@ struct stateArea {
 		x = inx;
 		y = iny;
 	}
+	void draw()
+	{
+		if (shape == 1)
+			drawO();
+		else if (shape == 2)
+			drawX();
+	}
 	void drawO()
 	{
-		unoccupied = true;
+		unoccupied = false;
 		vector<Vec*> points;
 		Vec center(x, y);
 		generateCircleData(points, center, .2, 30);
 		glBegin(GL_LINES);
 		for (int i = 0; i < points.size(); i++)
 		{
-			glVertex2f(points[i]->getX(), points[i]->getY());
+			glVertex2f(points[i]->getX(),points[i]->getY());
 		}
 		glEnd();
 	}
@@ -79,7 +87,7 @@ struct stateArea {
 	}
 	void drawX()
 	{
-		unoccupied = true;
+		unoccupied = false;
 		vector<Vec*> points;
 		Vec center(x, y);
 		generateXData(points, center);
@@ -104,33 +112,36 @@ struct stateArea {
 	}
 	bool contains(Vec coords)
 	{
-		if (coords.x<(x - 0.33) || coords.x>(x + .33))
+		if (coords.x<(x-0.33) || coords.x>(x +.33))
 			return false;
-		else if (coords.y > (y + 0.33) || coords.y < (y - 0.33))
+		else if (coords.y > (y+0.33) || coords.y < (y - 0.33))
 			return false;
 		else
 			return true;
 	}
 };
 
-class App : public GlutApp {
-	// Maintain app state here
-	float mx;
-	float my;
-	bool choose = false;
+class App: public GlutApp {
+    // Maintain app state here
+    float mx;
+    float my;
+	bool choose2p = false;
 	bool player = true;
+	bool compplayer= false;
+	bool foundNumber = false;
+	int test;
 	int within[9] = { 0,0,0,0,0,0,0,0,0 };
 	vector<Rect> list;
 	vector<stateArea*> entries;
 public:
-	// Constructor, to initialize state
-	App(const char* label, int x, int y, int w, int h);
-
-	// These are the events we want to handle
-	void draw();
-	void keyPress(unsigned char key);
-	void mouseDown(float x, float y);
-	void mouseDrag(float x, float y);
+    // Constructor, to initialize state
+    App(const char* label, int x, int y, int w, int h);
+    
+    // These are the events we want to handle
+    void draw();
+    void keyPress(unsigned char key);
+    void mouseDown(float x, float y);
+    void mouseDrag(float x, float y);
 };
 
 #endif

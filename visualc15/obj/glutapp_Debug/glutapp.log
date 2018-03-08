@@ -1,0 +1,17 @@
+﻿  App.cpp
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(64): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(79): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(104): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(105): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(106): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.h(107): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(11): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(38): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(182): warning C4018: '<': signed/unsigned mismatch
+c:\users\roman wong\documents\cse 170\glutapptemplate\app.cpp(196): warning C4018: '<': signed/unsigned mismatch
+  glutapp.vcxproj -> C:\Users\Roman Wong\Documents\CSE 170\GlutAppTemplate\visualc15\obj\glutapp_Debug\glutapp.exe
+  glutapp.vcxproj -> obj\glutapp_Debug\glutapp.pdb (Full PDB)
